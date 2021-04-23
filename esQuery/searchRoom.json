@@ -1,0 +1,14 @@
+{
+	"query" : {
+		"nested" : {
+			"path" : "users",
+			"query" : {
+				"bool" : {
+					"must" : [
+						{"term" : {"users.id" : "$USERID"}}
+					]
+				}
+			}
+        }
+	}
+}

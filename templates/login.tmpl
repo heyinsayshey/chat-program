@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<script>
+    var msg = {{ .alert }};
+    if( msg ) {
+        alert(msg);
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Sign in</h1>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">채팅을 시작하기 위해 먼저 로그인을 해주세요.</h3>
+            </div>
+            <div class="panel-body">
+                <form class="panel-footer" action="/login" method="POST">
+                    <input type="text" class="input-sm" name="id" autofocus=autofocus; placeholder="아이디" required/><br>
+                    <input type="password" class="input-sm" name="password" placeholder="비밀번호" required/><br><br>
+                    <button type="submit" class="btn">login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

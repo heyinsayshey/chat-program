@@ -1,0 +1,7 @@
+{
+	"create_date" : "$CREATE_DATE",
+	"title" : "$TITLE",
+	"users" : [
+		{"id" : "$USERID" }
+	]
+}

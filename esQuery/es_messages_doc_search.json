@@ -1,0 +1,45 @@
+{
+	"from" : "$PAGE_FROM",
+    "size" : "$PAGE_SIZE",
+    "sort" : [
+        {
+            "send_date" : "desc"
+        }
+    ],
+	"query" : {
+		"bool" : {
+			"must" : [
+				
+                {"match" :  
+					{"room_id" : "&&&&&&&"}
+				}
+			]
+		}
+		
+	}
+}
+
+// room_id, date 역순, limit 10개 씩 그 다음 10개, 
+
+"query" : {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "_id" : {
+                            "query": "$DOC_ID",
+                            "operator": "and"
+                        }
+                    }
+                },
+                {
+                    "match": {
+                        "binding.reserved.essential.agency.dept-code": {
+                            "query": "$DEPT_CODE",
+                            "operator": "and"
+                        }
+                    }
+                }
+            ]
+        }
+    }

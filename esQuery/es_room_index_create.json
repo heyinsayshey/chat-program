@@ -1,0 +1,62 @@
+PUT rooms
+{
+  "settings": {
+    "number_of_shards": 1,
+    "max_ngram_diff": "30",
+    "analysis": {
+      "analyzer": {
+        "text_ngram_analyzer": {
+          "tokenizer": "text_ngram_analyzer"
+        }
+      },
+      "tokenizer": {
+        "text_ngram_analyzer": {
+          "type": "ngram",
+          "min_gram": "1",
+          "max_gram": "30",
+          "token_chars": [
+            "letter",
+            "digit",
+            "whitespace",
+            "punctuation"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "create_date": {
+        "type": "date",
+        "format": "date_optional_time||yyyy/MM/dd"
+      },
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ngram": {
+            "type": "text",
+            "analyzer": "text_ngram_analyzer"
+          }
+        }
+      },
+      "users": {
+        "type": "nested",
+        "properties": {
+          "id": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
