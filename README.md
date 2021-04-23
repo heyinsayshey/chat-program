@@ -15,7 +15,7 @@
 - kibana
 - javascript
 
-![image](https://user-images.githubusercontent.com/46066397/115864668-28a41100-a472-11eb-957e-ab90a76cf614.png)
+![image](https://user-images.githubusercontent.com/46066397/115865647-93a21780-a473-11eb-948c-2ad62fdd5b07.png)
 
-![image](https://user-images.githubusercontent.com/46066397/115865228-0232a580-a473-11eb-9aaa-b39957e4a904.png)
+![image](https://user-images.githubusercontent.com/46066397/115865708-aae10500-a473-11eb-8cc3-fb5975593f67.png)
 
